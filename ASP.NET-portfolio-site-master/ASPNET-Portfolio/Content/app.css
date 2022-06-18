@@ -1,0 +1,378 @@
+﻿/*
+File name: app.css
+Author's name: Hae Yeon Kang (Lucy)
+web site name: Hae Yeon's Portfolio Website
+file description: custom css
+*/
+
+@font-face {
+	font-family: ostrich-sans-inline-regular;
+	src: url('custom_fonts/ostrich-sans-inline-regular.eot'), url('custom_fonts/ostrich-sans-inline-regular.ttf') format('truetype'), url('custom_fonts/ostrich-sans-inline-regular.woff');
+}
+
+@font-face {
+	font-family: Aaargh;
+	src: url('custom_fonts/Aaargh.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Cabin-Regular;
+	src: url('custom_fonts/Cabin-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: raleway_thin-webfont;
+	src: url('custom_fonts/raleway_thin-webfont.eot'), url('custom_fonts/raleway_thin-webfont.ttf') format('truetype'), url('custom_fonts/raleway_thin-webfont.woff');
+}
+
+/* CSS Reset for cross-browser consistency 
+    should be added later to fix.*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*/
+/* CSS for global */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+    margin-bottom: 45px;
+    font-family: Aaargh, Cabin-Regular, Arial Rounded MT;
+    font-size: 12pt;
+    z-index: 3;
+}
+
+h2{
+    font-size: 18pt;
+    font-weight: 500;
+}
+
+h3{
+    font-weight: 500;
+}
+
+/* Page background bottom setting (angled triangle) */
+body:before {
+	content: '';
+	display: block;  
+	position: absolute;
+    right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 0 solid transparent;
+	border-right: 0 solid transparent;
+	border-bottom: 500px solid magenta;
+	border-left: 600px solid transparent;
+    z-index: 0;
+}
+
+.body-back:before {
+    content: '';
+	display: block;  
+	position: absolute;
+    left: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 0 solid transparent;
+	border-right: 500px solid transparent;
+	border-bottom: 650px solid cyan;
+	border-left: 0 solid transparent;
+    z-index: 0;
+}
+
+.logo{
+    font-family: ostrich-sans-inline-regular;
+    font-size: 70pt;
+    color: black;
+}
+
+.panel {
+	background-color: rgba(255, 255, 255, 0.7);
+    font-family: raleway_thin-webfont;
+}
+      
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 20px;
+}
+
+.navbar-brand:hover {
+    color: #615f5d;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: grey;
+}
+
+.navbar .navbar-collapse {
+    margin-top: 10px;
+    text-align: center;
+}
+    
+.navbar-transparent .navbar-nav > li > a {
+    padding-top: 35px;
+    padding-bottom: 15px; 
+    font-family: raleway_thin-webfont;
+    font-size: 15px;
+    color: grey;
+    
+}
+
+.navbar-transparent .navbar-nav > li > a:hover{
+        color: rgb(255,0,70);
+        text-decoration: underline;
+        background-color: transparent;
+        /*rgb(255,245,75);*/
+}
+
+.navbar-transparent .navbar-nav > .active > a,
+.navbar-transparent .navbar-nav > .active > a:active,
+.navbar-transparent .navbar-nav > .active > a:hover,
+.navbar-transparent .navbar-nav > .active > a:focus{
+    color: rgb(255,0,70);
+    text-decoration: underline;
+    background-color: transparent;
+        /*rgb(255,245,75);*/
+}
+
+.row {
+    margin-bottom: 70px;
+}
+
+.main > .container {
+    padding-top: 30px;
+    position: relative;
+    z-index: 3;
+    font-weight: 500;
+}
+
+
+/* Index page */
+.panel .text-vertical-center {
+    /*margin-top: 200px;*/
+    margin: 150px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Button Styles on Index Page */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.btn-submit {
+    background-color: #f2b632;
+    font-weight: 600;
+}
+
+.btn-reset {
+    background-color: #252839;
+    color: #FDFFFC;
+    font-weight: 600;
+}
+
+.btn-submit:hover, .btn-reset:hover{
+    background-color: white;
+    font-weight: 600;
+}
+
+/* Custom Horizontal Rule */
+hr.small {
+    max-width: 100px;
+}
+
+/* Portfolio page */
+.row > .portfolio-item > h4 {
+    margin-top: 50px;
+}
+
+.row > .text-center {
+    margin-bottom: 5px;
+}
+
+/* Services page */
+img.serviceimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.panel-in-service{
+    font-family: Aaargh, Cabin-Regular, Arial Rounded MT;
+}
+
+.alert{
+    border: 0 solid transparent;
+    background-color: white;
+    font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  font-size: 9pt;
+  font-weight: 600;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Responsive CSS rules for various devices */
+
+@media screen and (max-width: 767px) {
+    body{
+        margin-bottom: 5px;
+    }
+    .navbar-brand{
+        font-size: 50px;
+    }
+    .page-header, .profile-pic{
+        position: relative;
+        text-align: center;
+    }
+    .img-center{
+        height: 100px;
+    }
+    img.serviceimg{
+        width: 400px;
+    }
+    .footer{
+        height: 25px;
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .page-header, .profile-pic{
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+    
+}
+@media screen and (min-width:1200px) {
+    
+}
+/*
+.navbar {
+	/*background: none;
+	margin-top: 20px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+*/

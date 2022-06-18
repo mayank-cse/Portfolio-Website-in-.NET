@@ -1,0 +1,89 @@
+﻿/*
+File name: home-page.css
+Author's name: Hae Yeon Kang (Lucy)
+web site name: Hae Yeon's Portfolio Website
+file description: custom css only for the dafault page.
+*/
+
+/* import fonts */
+@font-face {
+	font-family: ostrich-sans-inline-regular;
+	src: url('custom_fonts/ostrich-sans-inline-regular.eot'), url('custom_fonts/ostrich-sans-inline-regular.ttf') format('truetype'), url('custom_fonts/ostrich-sans-inline-regular.woff');
+}
+
+@font-face {
+	font-family: Aaargh;
+	src: url('custom_fonts/Aaargh.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Cabin-Regular;
+	src: url('custom_fonts/Cabin-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: raleway_thin-webfont;
+	src: url('custom_fonts/raleway_thin-webfont.eot'), url('custom_fonts/raleway_thin-webfont.ttf') format('truetype'), url('custom_fonts/raleway_thin-webfont.woff');
+}
+
+/* CSS for global */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+    margin-bottom: 100px;
+    font-family: raleway_thin-webfont, Arial Rounded MT;
+    font-size: 12pt;
+    z-index: 3;
+}
+
+.logo{
+    font-family: ostrich-sans-inline-regular;
+    font-size: 70pt;
+    color: black;
+}
+
+.full {
+    background: url(../Assets/images/buildings.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: 3;
+}
+.panel {
+    margin-top: 130px;
+	background-color: rgba(255, 255, 255, 0.7);
+    font-family: raleway_thin-webfont;
+}
+
+/* Index page */
+.panel .text-vertical-center {
+  
+    margin: 150px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Custom Button Styles on Index Page */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
